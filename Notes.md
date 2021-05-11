@@ -58,6 +58,45 @@ puts x #=> 2
 
 ### Arrays
 - An array is an ordered collection of elements, where each element is identified by an **integer index**.
+- We can create arrays using literals. As everything is an object, this implies that an array can hold **objects of different types**:
+```
+a = ["number", 1, 2, 3.14]  # Array with 4 elements
+puts a[0]                   #=> number
+a[3] = nil                  # Set the last element to nil
+puts a                      # Access and display entire array.
+                            #=> number 1 2 nil
+```
+
+- We can also create an array by explicitly creating an Array object. Ruby allows us to specify array ranges, as in the example below:
+```
+myarray = [ 0, 1, 2, 3, 4, 5 ]
+puts myarray[0]       #=> 0
+
+                      # [i...j] from index i to j excluding j
+puts myarray[1...3]   # Exclusive range => 1 2.
+
+                      # [i..j] from index i to j including j
+puts myarray[1..3]    # Inclusive range. => 1 2 3.
+puts myarray[1,3]     # Range between 1st up to 3rd consecutive, inclusive.
+                      #=> 2 3 4.
+```
+- Ruby allows a negative index, forcing the array to count from the end.
+```
+a = [ "pi", 3.14, "prime", 17 ]
+puts a[-1]      #=> 17
+```
+
+### Associative arrays
+- An **associative array** or **hash** is an **unordered collection of elements**.
+- An element is a pair of 2 objects: a **value** and a **key** through which the value can be retrieved. The value can be an object of any type.
+- To store an element in an associative array, we must supply both objects:
+```
+hashName = {"key" => "value",
+             ...
+           }
+```
+- We can subsequently retrieve the value by supplying the appropriate key:
+`hashName["key"] => value`
 
 
 
