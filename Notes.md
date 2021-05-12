@@ -98,7 +98,9 @@ hashName = {"key" => "value",
 - We can subsequently retrieve the value by supplying the appropriate key:
 
 `hashName["key"] => value`
+- We can access the collection to obtain the value associated with a given key:
 
+`puts hashName["key"] #=> value'
 
 
 
